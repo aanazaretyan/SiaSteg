@@ -19,7 +19,7 @@ We hope that our SiaStegNet design can provide some inspiration for future resea
 ### Usage
 #### Quickstart
 ```
-python train.py --train-cover-dir ... --val-cover-dir ... --train-stego-dir ... --val-stego-dir ... --model kenet --ckpt-dir ...
+python3 train.py --train-cover-dir images/boss_256_0.4/cover/ --val-cover-dir images/boss_256_0.4_test/cover/ --train-stego-dir images/boss_256_0.4/stego/ --val-stego-dir images/boss_256_0.4_test/stego/ --model kenet --ckpt-dir results/
 ```
 (''kenet'' is the SiaStegNet, because my name is ''ke''. ^_^)
 
