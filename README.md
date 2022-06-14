@@ -25,7 +25,9 @@ python3 train.py --train-cover-dir images/boss_256_0.4/cover/ --val-cover-dir im
 
 #### Roc line
 ```
-!cd SiaSteg/ && python roc.py --val-cover-dir images/boss_256_0.4_test/cover --val-stego-dir images/boss_256_0.4_test/stego --checkpoint results/checkpoint.pth.tar --save-as RESULT```
+python roc.py --val-cover-dir images/boss_256_0.4_test/cover --val-stego-dir images/boss_256_0.4_test/stego --checkpoint results/checkpoint.pth.tar --save-as RESULT
+```
+
 (!!!The NVIDIA GeForce RTX 2080 Ti graphics card is not recommended!!!)
 #### Other Parameters
 * --epoch
