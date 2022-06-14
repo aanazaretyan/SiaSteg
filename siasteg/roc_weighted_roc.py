@@ -11,8 +11,6 @@ from sklearn import metrics
 import numpy as np
 
 import src
-from src import utils
-from src.data import build_train_loader
 from src.data import build_val_loader
 
 parser = argparse.ArgumentParser(description='Validation of KeNet')

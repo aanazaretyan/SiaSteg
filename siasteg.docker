@@ -1,0 +1,23 @@
+FROM python
+
+WORKDIR /app
+
+RUN apt-get update \
+    && apt-get upgrade -y \
+    && apt-get install -y libgl1 libglib2.0-0 \
+    && pip install --upgrade pip
+
+RUN pip install torch torchvision --no-cache-dir --extra-index-url https://download.pytorch.org/whl/cu113
+
+COPY requirements.txt ./
+
+RUN pip install -r requirements.txt && rm requirements.txt
+
+COPY siasteg/ ./
+
+RUN python3 train.py --train-cover-dir images/boss_256_0.4/cover/ \
+    --val-cover-dir images/boss_256_0.4_test/cover/  \
+    --train-stego-dir images/boss_256_0.4/stego/  \
+    --val-stego-dir images/boss_256_0.4_test/stego/  \
+    --model kenet  \
+    --ckpt-dir results/

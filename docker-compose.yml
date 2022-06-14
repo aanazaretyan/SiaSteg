@@ -1,0 +1,9 @@
+version: '3'
+services:
+  siasteg:
+    container_name: siasteg
+    build:
+      context: ./
+      dockerfile: siasteg.docker
+#    volumes:
+#      - ./siasteg:/app\

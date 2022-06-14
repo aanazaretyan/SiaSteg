@@ -20,7 +20,6 @@ from src import utils
 from src.data import build_train_loader
 from src.data import build_val_loader
 from src.data import build_otf_train_loader
-from src.matlab import matlab_speedy
 
 logger = logging.getLogger(__name__)
 

@@ -1,7 +1,6 @@
 from __future__ import print_function
 
 import argparse
-import random
 
 import matplotlib as mpl
 mpl.use('Agg')
@@ -10,8 +9,6 @@ import torch
 from sklearn import metrics
 
 import src
-from src import utils
-from src.data import build_train_loader
 from src.data import build_val_loader
 
 parser = argparse.ArgumentParser(description='Validation of KeNet')
