@@ -95,13 +95,13 @@ def configure_logging(level=logging.INFO, file=None, mode='w', format=None, date
     basic_formatters.update(extra_formatters)
     basic_handlers.update(extra_handlers)
 
-    logging.config.dictConfig(dict(
-        version=1,
-        disable_existing_loggers=False,
-        formatters=basic_formatters,
-        handlers=basic_handlers,
-        root={
-            'level': level,
-            'handlers': root_handlers,
-        }
-    ))
+    # logging.config.dictConfig(dict(
+    #     version=1,
+    #     disable_existing_loggers=False,
+    #     formatters=basic_formatters,
+    #     handlers=basic_handlers,
+    #     root={
+    #         'level': level,
+    #         'handlers': root_handlers,
+    #     }
+    # ))
