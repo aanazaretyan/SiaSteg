@@ -5,5 +5,3 @@ services:
     build:
       context: ./
       dockerfile: siasteg.docker
-#    volumes:
-#      - ./siasteg:/app\
